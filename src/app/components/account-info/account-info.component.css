@@ -26,6 +26,7 @@
 
 .info-item label {
     font-weight: bold;
+    padding-right: 15px;
 }
 
 @media (max-width: 768px) {

@@ -11,6 +11,7 @@
 
 .id-card.editing {
     background-color: #F0EAD6;
+    border: 4px dashed #B95319;
 }
 
 .id-card-header {

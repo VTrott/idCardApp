@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './document-upload.component.css'
 })
 export class DocumentUploadComponent {
-
+  uploadDocument(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files) {
+      const files = Array.from(input.files);
+      console.log('Files uploaded:', files);
+    }
+  }
 }
