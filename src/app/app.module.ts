@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { IdCardComponent } from './id-card/id-card.component'; // Adjust the path if necessary
+import { IdCardComponent } from './components/id-card/id-card.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    IdCardComponent  // Ensure this line is present
+    IdCardComponent 
   ],
   imports: [
     BrowserModule,

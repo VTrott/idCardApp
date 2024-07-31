@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-account-info',
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './account-info.component.css'
 })
 export class AccountInfoComponent {
-
+@Input() firstName!:string;
+@Input() lastName!:string;
+@Input() email!:string;
+@Input() phoneNumber!:string;
 }

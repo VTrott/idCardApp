@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { IdCardComponent } from './id-card/id-card.component';
+import { IdCardComponent } from './components/id-card/id-card.component';
 
 @Component({
   selector: 'app-root',

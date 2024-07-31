@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-personal-info',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './personal-info.component.css'
 })
 export class PersonalInfoComponent {
-
+@Input() ssn!: string;
+@Input() birthday!: string;
+@Input() medicareId!: string;
 }

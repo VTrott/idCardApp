@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-address-info',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './address-info.component.css'
 })
 export class AddressInfoComponent {
-
+@Input() homeAddress!:string;
+@Input() mailingAddress!:string;
 }
