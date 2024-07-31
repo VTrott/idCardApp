@@ -1,1 +1,29 @@
-<p>account-info works!</p>
+<div class="account-info">
+    <h4>Account Information</h4>
+    <div class="info-container">
+        <div class="left-section">
+            <div class="info-item">
+                <label>First Name:</label>
+                <span *ngIf="!isEditing">{{ firstName }}</span>
+                <input *ngIf="isEditing" formControlName="firstName" type="text" class="form-control editing">
+            </div>
+            <div class="info-item">
+                <label>Last Name:</label>
+                <span *ngIf="!isEditing">{{ lastName }}</span>
+                <input *ngIf="isEditing" formControlName="lastName" type="text" class="form-control editing">
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="info-item">
+                <label>Registered Email:</label>
+                <span *ngIf="!isEditing">{{ email }}</span>
+                <input *ngIf="isEditing" formControlName="email" type="email" class="form-control editing">
+            </div>
+            <div class="info-item">
+                <label>Cellphone Number:</label>
+                <span *ngIf="!isEditing">{{ phoneNumber }}</span>
+                <input *ngIf="isEditing" formControlName="phoneNumber" type="phoneNumber" class="form-control editing">
+            </div>
+        </div>
+    </div>
+</div>

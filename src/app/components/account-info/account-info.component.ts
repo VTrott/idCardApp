@@ -8,8 +8,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './account-info.component.css'
 })
 export class AccountInfoComponent {
-@Input() firstName!:string;
-@Input() lastName!:string;
-@Input() email!:string;
-@Input() phoneNumber!:string;
+@Input() firstName!: string;
+@Input() lastName!: string;
+@Input() email!: string;
+@Input() phoneNumber!: string;
+@Input() isEditing!: boolean;
 }

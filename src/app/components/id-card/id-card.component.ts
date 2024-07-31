@@ -44,6 +44,7 @@ export class IdCardComponent {
 
   toggleEdit() {
     this.isEditing = !this.isEditing;
+    // Save the form data 
     if(!this.isEditing) {
       this.editForm.reset(this.user);
     }

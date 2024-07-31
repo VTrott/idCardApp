@@ -1,0 +1,43 @@
+.account-info {
+    margin-bottom: 16px;
+    font-family: 'Jost',sans-serif;
+}
+
+.account-info h4 {
+    color: #B95319;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left-section,
+.right-section {
+    flex:1;
+    min-width: 200px;
+}
+
+.info-item {
+    margin-bottom: 8px;
+    color:black;
+}
+
+.info-item label {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        min-width:100%;
+    }
+    .info-item label {
+        margin-bottom: 4px;
+    }
+}
