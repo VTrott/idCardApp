@@ -1,0 +1,68 @@
+<div class="id-card">
+    <div class="id-card-header">
+      <h3>ID Card</h3>
+    <button (click)="toggleEdit()">
+      <i class ="fas fa-pencil"></i>
+    </button>
+    </div>
+
+    <div *ngIf="!isEditing">
+      <app-account-info
+        [firstName]="user.firstName"
+        [lastName]="user.lastName"
+        [email]="user.email"
+        [phoneNumber]="user.phoneNumber">
+      </app-account-info>
+      <app-address-info
+        [homeAddress]="user.homeAddress"
+        [mailingAddress]="user.mailingAddress">
+      </app-address-info>
+      <app-personal-info
+        [ssn]="user.ssn"
+        [birthday]="user.birthday"
+        [medicareId]="user.medicareId">
+      </app-personal-info>
+      <app-document-upload></app-document-upload>
+    </div>
+
+    <div *ngIf="isEditing">
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <div class="form-group--first-name">
+          <label for="firstName">First Name</label>
+          <input id="firstName" formControlName="firstName" type="text" class="form-control--first-name">
+        </div>
+        <div class="form-group--last-name">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" formControlName="lastName" type="text" class="form-control--last-name">
+        </div>
+        <div class="form-group--email">
+          <label for="email">Email</label>
+          <input id="email" formControlName="email" type="email" class="form-control--email">
+        </div>
+        <div class="form-group--home-address">
+          <label for="homeAddress">Home Address</label>
+          <input id="homeAddress" formControlName="homeAddress" type="homeAddress" class="form-control--home-address">
+        </div>
+        <div class="form-group--mailing-address">
+          <label for="mailingAddress">Mailing Address</label>
+          <input id="email" formControlName="email" type="email" class="form-control--mailing-address">
+        </div>
+        <div class="form-group--ssn">
+          <label for="ssn">Social Security Number</label>
+          <input id="ssn" formControlName="ssn" type="text" class="form-control--ssn">
+        </div>
+        <div class="form-group--birthday">
+          <label for="birthday">Birthday</label>
+          <input id="birthday" formControlName="birthday" type="date" class="form-control--birthday">
+        </div>
+        <div class="form-group--medicareId">
+          <label for="medicareId">Medicare Beneficiary Identifiers</label>
+          <input id="medicareId" formControlName="medicareId" type="text" class="form-control--medicareId">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" (click)="toggleEdit()">Cancel</button>
+      </form>
+    </div>
+   
+  </div>
+  
