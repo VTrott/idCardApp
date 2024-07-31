@@ -3,11 +3,11 @@
     <div class="address-info-item">
         <label>Home Address:</label>
         <span *ngIf="!isEditing">{{ homeAddress }}</span>
-        <input *ngf="isEditing" formControlName="homeAddress" type="text" class="form-control editing">
+        <input *ngIf="isEditing" formControlName="homeAddress" type="text" class="form-control editing">
     </div>
     <div class="address-info-item">
         <label>Mailing Address:</label>
         <span *ngIf="!isEditing">{{ mailingAddress }}</span>
-        <input *ngf="isEditing" formControlName="mailingAddress" type="text" class="form-control editing">
+        <input *ngIf="isEditing" formControlName="mailingAddress" type="text" class="form-control editing">
     </div>
 </div>
