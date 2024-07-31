@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #B95319;
+    margin-bottom: 16px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a:hover {
+    background-color: #FFF3FC;
+    color: #B95319;
+}
+
+@media (max-width:768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}

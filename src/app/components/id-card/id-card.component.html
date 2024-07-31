@@ -9,61 +9,28 @@
       </button>
     </div>
 
-    <div *ngIf="!isEditing">
+    <form [formGroup] ="editForm" (ngSubmit)="onSubmit">
       <app-account-info
         [firstName]="user.firstName"
         [lastName]="user.lastName"
         [email]="user.email"
-        [phoneNumber]="user.phoneNumber">
+        [phoneNumber]="user.phoneNumber"
+        [isEditing]="isEditing">
       </app-account-info>
       <app-address-info
         [homeAddress]="user.homeAddress"
-        [mailingAddress]="user.mailingAddress">
+        [mailingAddress]="user.mailingAddress"
+        [isEditing]="isEditing">
       </app-address-info>
       <app-personal-info
         [ssn]="user.ssn"
         [birthday]="user.birthday"
-        [medicareId]="user.medicareId">
+        [medicareId]="user.medicareId"
+        [isEditing]="isEditing">
       </app-personal-info>
-      <app-document-upload></app-document-upload>
-    </div>
-
-    <div *ngIf="isEditing">
-      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input id="firstName" formControlName="firstName" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input id="lastName" formControlName="lastName" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" formControlName="email" type="email" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="homeAddress">Home Address</label>
-          <input id="homeAddress" formControlName="homeAddress" type="homeAddress" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="mailingAddress">Mailing Address</label>
-          <input id="mailingAddress" formControlName="mailingAddress" type="mailingAddress" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="ssn">Social Security Number</label>
-          <input id="ssn" formControlName="ssn" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="birthday">Birthday</label>
-          <input id="birthday" formControlName="birthday" type="date" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="medicareId">Medicare Beneficiary Identifiers</label>
-          <input id="medicareId" formControlName="medicareId" type="text" class="form-control">
-        </div>
-      </form>
-    </div>
-   
+      <app-document-upload
+       [isEditing]="isEditing" >
+      </app-document-upload>
+    </form>
   </div>
   
