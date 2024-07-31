@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './address-info.component.css'
 })
 export class AddressInfoComponent {
-@Input() homeAddress!:string;
-@Input() mailingAddress!:string;
+@Input() homeAddress!: string;
+@Input() mailingAddress!: string;
+@Input() isEditing!: boolean;
 }

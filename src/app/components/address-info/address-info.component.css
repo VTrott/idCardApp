@@ -1,0 +1,29 @@
+.address-info {
+    margin-bottom: 16px;
+    font-family:'Jost',sans-serif;
+}
+
+.address-info h4{
+    color: #B95319;
+}
+
+.address-info-item {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.address-info-item label {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .address-info-item{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .address-info-item label {
+        margin-bottom: 4px;
+    }
+}
