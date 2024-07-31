@@ -1,9 +1,12 @@
-<div class="id-card">
+<div class="id-card" [ngClass]="{'editing': isEditing}">
     <div class="id-card-header">
-      <h3>ID Card</h3>
-    <button (click)="toggleEdit()">
-      <i class ="fas fa-pencil"></i>
-    </button>
+      <div class="id-card-title">
+        <i class="fas fa-user"></i>
+        ID Card
+      </div>
+      <button class="edit-btn" (click)="toggleEdit()">
+        <i class="fas" [ngClass]="isEditing ? 'fa-check' : 'fa-pen' "></i>
+      </button>
     </div>
 
     <div *ngIf="!isEditing">
@@ -27,40 +30,38 @@
 
     <div *ngIf="isEditing">
       <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-        <div class="form-group--first-name">
+        <div class="form-group">
           <label for="firstName">First Name</label>
-          <input id="firstName" formControlName="firstName" type="text" class="form-control--first-name">
+          <input id="firstName" formControlName="firstName" type="text" class="form-control">
         </div>
-        <div class="form-group--last-name">
+        <div class="form-group">
           <label for="lastName">Last Name</label>
-          <input id="lastName" formControlName="lastName" type="text" class="form-control--last-name">
+          <input id="lastName" formControlName="lastName" type="text" class="form-control">
         </div>
-        <div class="form-group--email">
+        <div class="form-group">
           <label for="email">Email</label>
-          <input id="email" formControlName="email" type="email" class="form-control--email">
+          <input id="email" formControlName="email" type="email" class="form-control">
         </div>
-        <div class="form-group--home-address">
+        <div class="form-group">
           <label for="homeAddress">Home Address</label>
-          <input id="homeAddress" formControlName="homeAddress" type="homeAddress" class="form-control--home-address">
+          <input id="homeAddress" formControlName="homeAddress" type="homeAddress" class="form-control">
         </div>
-        <div class="form-group--mailing-address">
+        <div class="form-group">
           <label for="mailingAddress">Mailing Address</label>
-          <input id="email" formControlName="email" type="email" class="form-control--mailing-address">
+          <input id="mailingAddress" formControlName="mailingAddress" type="mailingAddress" class="form-control">
         </div>
-        <div class="form-group--ssn">
+        <div class="form-group">
           <label for="ssn">Social Security Number</label>
-          <input id="ssn" formControlName="ssn" type="text" class="form-control--ssn">
+          <input id="ssn" formControlName="ssn" type="text" class="form-control">
         </div>
-        <div class="form-group--birthday">
+        <div class="form-group">
           <label for="birthday">Birthday</label>
-          <input id="birthday" formControlName="birthday" type="date" class="form-control--birthday">
+          <input id="birthday" formControlName="birthday" type="date" class="form-control">
         </div>
-        <div class="form-group--medicareId">
+        <div class="form-group">
           <label for="medicareId">Medicare Beneficiary Identifiers</label>
-          <input id="medicareId" formControlName="medicareId" type="text" class="form-control--medicareId">
+          <input id="medicareId" formControlName="medicareId" type="text" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Save</button>
-        <button type="button" class="btn btn-secondary" (click)="toggleEdit()">Cancel</button>
       </form>
     </div>
    
