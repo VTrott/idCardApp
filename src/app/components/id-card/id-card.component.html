@@ -1,9 +1,9 @@
 <div class="id-card" [ngClass]="{'editing': isEditing}">
     <div class="id-card-header">
-      <div class="id-card-title">
+      <h3 class="id-card-title">
+        ID
         <i class="fas fa-user"></i>
-        ID Card
-      </div>
+      </h3>
       <button class="edit-btn" (click)="toggleEdit()">
         <i class="fas" [ngClass]="isEditing ? 'fa-check' : 'fa-pen' "></i>
       </button>
@@ -13,7 +13,7 @@
       <app-account-info [isEditing]="isEditing" [user]="user" (userChange)="onUserChange($event)"></app-account-info>
       <app-address-info  [isEditing]="isEditing" [user]="user" (userChange)="onUserChange($event)"></app-address-info>
       <app-personal-info [isEditing]="isEditing" [user]="user" (userChange)="onUserChange($event)"></app-personal-info>
-      <app-document-upload ></app-document-upload>
+      <app-document-upload [isEditing]="isEditing" [documents]="user.documents" (documentUploaded)="onDocumentUploaded($event)"></app-document-upload>
     </form>
   </div>
   

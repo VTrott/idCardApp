@@ -1,4 +1,10 @@
 <div class="document-upload">
     <h4>Documents</h4>
-    <input type="file" (change)="uploadDocument($event)" multiple>
+    <input *ngIf="isEditing" type="file" (change)="onFileSelected($event)">
+
+    <div *ngIf="!isEditing" class="documents-section">
+        <div *ngFor="let document of documents" class="document-item">
+            <i [ngClass]="getIcon(document.type)"></i> {{ document.name}}
+        </div>
+    </div>
 </div>

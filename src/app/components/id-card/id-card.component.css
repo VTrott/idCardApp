@@ -3,14 +3,14 @@
     padding: 16px;
     border-radius: 8px;
     margin-bottom: 16px;
-    background-color: #FFF3FC;
+    background-color: #FFF3EC;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
     font-family: 'Jost',sans-serif;
 }
 
 .id-card.editing {
-    background-color: #F0EAD6;
+    background-color: #FFF3EC 75%;
     border: 4px dashed #B95319;
 }
 

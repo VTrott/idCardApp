@@ -6,6 +6,7 @@ import { AddressInfoComponent } from '../address-info/address-info.component';
 import { PersonalInfoComponent } from '../personal-info/personal-info.component';
 import { DocumentUploadComponent } from '../document-upload/document-upload.component';
 import { User } from '../../models/user.model';
+import { UserDocument } from '../../models/user.model';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -44,5 +45,14 @@ export class IdCardComponent implements OnInit{
   
   onUserChange( updatedUser: User){
     this.user = updatedUser;
+  }
+
+  onDocumentUploaded( document: {name: string, type: string }) {
+    const newDocument: UserDocument = {
+      name: document.name,
+      type: document.type
+    }
+    this.userService.addDocument(newDocument);
+    this.user = this.userService.getUser(); // Refresh user data 
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/user.model';
+import { User, UserDocument } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,8 @@ private user: User = {
   mailingAddress: '10th West, 456 Apple Street, Cleveland, OH 44127',
   ssn: '235-71-1083',
   birthday:'05/09/1998',
-  medicareId: '1EG4-TE5-MK73'
+  medicareId: '1EG4-TE5-MK73',
+  documents: []
 };
 
 
@@ -26,5 +27,11 @@ getUser(): User {
 updateUser(updateUser: User): void {
   this.user = {...updateUser };
 }
+
+addDocument(document: UserDocument) : void {
+  this.user.documents.push(document);
+}
   constructor() { }
 }
+
+

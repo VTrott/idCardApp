@@ -1,3 +1,5 @@
+import { UserDocument } from "./user-document.model";
+
 export interface User {
     firstName: string;
     lastName: string;
@@ -7,5 +9,8 @@ export interface User {
     mailingAddress:string;
     ssn: string;
     birthday: string;
-    medicareId:string;    
+    medicareId:string;
+    documents: UserDocument[];    
 }
+export { UserDocument };
+
