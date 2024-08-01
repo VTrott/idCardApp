@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-private userSubject = new BehaviorSubject<User>({
+private user: User = {
   firstName:'Ebony',
   lastName:'Moore',
   email: 'EbonyMoore456@gmail.com',
@@ -16,16 +15,16 @@ private userSubject = new BehaviorSubject<User>({
   ssn: '235-71-1083',
   birthday:'05/09/1998',
   medicareId: '1EG4-TE5-MK73'
-});
+};
 
-user = this.userSubject.asObservable();
+
 
 getUser(): User {
-  return this.userSubject.value;
+  return {...this.user} //Return a copy of user object
 }
 
-updateUser(user:User): void {
-  this.userSubject.next(user);
+updateUser(updateUser: User): void {
+  this.user = {...updateUser };
 }
   constructor() { }
 }

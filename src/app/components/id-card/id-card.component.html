@@ -9,27 +9,11 @@
       </button>
     </div>
 
-    <form [formGroup] ="editForm" (ngSubmit)="onSubmit()">
-      <app-account-info
-        [firstName]="user.firstName"
-        [lastName]="user.lastName"
-        [email]="user.email"
-        [phoneNumber]="user.phoneNumber"
-        [isEditing]="isEditing">
-      </app-account-info>
-      <app-address-info
-        [homeAddress]="user.homeAddress"
-        [mailingAddress]="user.mailingAddress"
-        [isEditing]="isEditing">
-      </app-address-info>
-      <app-personal-info
-        [ssn]="user.ssn"
-        [birthday]="user.birthday"
-        [medicareId]="user.medicareId"
-        [isEditing]="isEditing">
-      </app-personal-info>
-      <app-document-upload>
-      </app-document-upload>
+    <form  (ngSubmit)="onSubmit()">
+      <app-account-info [isEditing]="isEditing" [user]="user" (userChange)="onUserChange($event)"></app-account-info>
+      <app-address-info  [isEditing]="isEditing" [user]="user" (userChange)="onUserChange($event)"></app-address-info>
+      <app-personal-info [isEditing]="isEditing" [user]="user" (userChange)="onUserChange($event)"></app-personal-info>
+      <app-document-upload ></app-document-upload>
     </form>
   </div>
   

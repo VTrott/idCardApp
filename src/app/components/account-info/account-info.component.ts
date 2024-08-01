@@ -1,18 +1,23 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-account-info',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule],
   templateUrl: './account-info.component.html',
-  styleUrl: './account-info.component.css'
+  styleUrl: './account-info.component.css',
 })
+
 export class AccountInfoComponent {
-@Input() firstName!: string;
-@Input() lastName!: string;
-@Input() email!: string;
-@Input() phoneNumber!: string;
-@Input() isEditing!: boolean;
+  @Input() isEditing!:boolean;
+  @Input() user!: User;
+  @Output() userChange=new EventEmitter<User>();
+
+    updateUser(field: keyof User, event: Event) {
+      const inputElement = event?.target as HTMLInputElement
+      this.user={ ...this.user,[field]:inputElement.value}
+      this.userChange.emit(this.user);
+    }
 }

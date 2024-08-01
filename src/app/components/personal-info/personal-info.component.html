@@ -2,17 +2,17 @@
     <h4>Personally Identifiable Information</h4>
     <div class="personal-info-item">
         <label>Social Security Number:</label>
-        <span *ngIf="!isEditing"> {{ ssn }} </span>
-        <input *ngIf="isEditing" formControlName="ssn" type="text" class="form-control editing">
+        <span *ngIf="!isEditing"> {{ user.ssn}} </span>
+        <input *ngIf="isEditing" [value]="user.ssn" (input)="updateUser('ssn',$event)" type="text" class="form-control editing">
     </div>
     <div class="personal-info-item">
         <label>Birthday:</label>
-        <span *ngIf="!isEditing"> {{ birthday }} </span>
-        <input *ngIf="isEditing" formControlName="birthday" type="date" class="form-control editing">
+        <span *ngIf="!isEditing"> {{ user.birthday}} </span>
+        <input *ngIf="isEditing" [value]="user.birthday" (input)="updateUser('birthday', $event)" type="date" class="form-control editing">
     </div>
     <div class="personal-info-item">
         <label>Medicare Beneficiary Identifiers:</label>
-        <span *ngIf="!isEditing"> {{ medicareId }} </span>
-        <input *ngIf="isEditing" formControlName="medicareId" type="text" class="form-control editing">
+        <span *ngIf="isEditing"> {{ user.medicareId}} </span>
+        <input *ngIf="isEditing" [value]="user.medicareId" (input)="updateUser('medicareId', $event)" type="text" class="form-control editing">
     </div>
 </div>
