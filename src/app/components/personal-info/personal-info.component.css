@@ -8,13 +8,14 @@
     font-size: 18px;
     font-weight: bold;
 }
-
+@media(min-width:769px){ 
 .personal-info-item {
     align-items: center;
     display:grid;
     gap:20px;
     grid-template-columns: 300px 1fr;
     margin-bottom: 15px;
+}
 }
 
 .personal-info-item label {
@@ -44,6 +45,12 @@
     }
 
     .personal-info-item label {
-        margin-bottom: 4px;
+        margin-bottom: 4px;        
+        text-align: left;
+        width: 100%;
+    }
+
+    .input-wrapper{
+        width: 100%;
     }
 }

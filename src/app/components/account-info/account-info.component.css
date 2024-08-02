@@ -42,5 +42,11 @@
     }
     .info-item label {
         margin-bottom: 4px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .input-wrapper{
+        width: 100%;
     }
 }

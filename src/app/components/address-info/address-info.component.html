@@ -7,7 +7,7 @@
     </div>
     <div class="address-info-item">
         <label>Mailing Address:</label>
-        <span *ngIf="!isEditing">{{ user.mailingAddress }}</span>
+        <span *ngIf="!isEditing" class="mailing-address">{{ user.mailingAddress }}</span>
         <input *ngIf="isEditing" [value]="user.mailingAddress" (input)="updateUser('mailingAddress', $event)" type="text" class="form-control editing">
     </div>
 </div>
