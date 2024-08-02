@@ -1,0 +1,16 @@
+.document-upload {
+    margin-bottom: 16px;
+    font-family: 'Jost', sans-serif;
+}
+
+.document-upload h4 {
+    color: #B95319;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width:768px) {
+    .document-upload input {
+        width: 100%;
+    }
+}

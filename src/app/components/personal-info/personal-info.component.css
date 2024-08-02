@@ -1,0 +1,49 @@
+.personal-info {
+    margin-bottom: 16px;
+    font-family: 'Jost', sans-serif;
+}
+
+.personal-info h4 {
+    color: #B95319;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.personal-info-item {
+    align-items: center;
+    display:grid;
+    gap:20px;
+    grid-template-columns: 300px 1fr;
+    margin-bottom: 15px;
+}
+
+.personal-info-item label {
+    font-weight: bold;
+    margin-right: 10px;
+    width:auto;
+    white-space: nowrap;
+}
+
+.personal-info-item input.editing {
+    flex-grow: 1;
+    padding: 8px; 
+}
+
+.birthday-editing-label {
+    padding-right: 120px;
+}
+
+.personal-info-item span {
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .personal-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .personal-info-item label {
+        margin-bottom: 4px;
+    }
+}

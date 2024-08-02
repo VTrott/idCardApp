@@ -1,1 +1,18 @@
-<p>personal-info works!</p>
+<div class="personal-info">
+    <h4>Personally Identifiable Information</h4>
+    <div class="personal-info-item">
+        <label>Social Security Number:</label>
+        <span *ngIf="!isEditing"> {{ user.ssn}} </span>
+        <input *ngIf="isEditing" [value]="user.ssn" (input)="updateUser('ssn',$event)" type="text" id="ssn" class="form-control editing">
+    </div>
+    <div class="personal-info-item">
+        <label for="birthday" [ngClass]="{'birthday-editing-label' : isEditing}">Birthday:</label>
+        <span *ngIf="!isEditing"> {{ user.birthday}} </span>
+        <input *ngIf="isEditing" [value]="user.birthday" (input)="updateUser('birthday', $event)" type="date" id="birthday" class="form-control editing">
+    </div>
+    <div class="personal-info-item">
+        <label>Medicare Beneficiary Identifiers:</label>
+        <span *ngIf="!isEditing"> {{ user.medicareId}} </span>
+        <input *ngIf="isEditing" [value]="user.medicareId" (input)="updateUser('medicareId', $event)" type="text" id="medicareId" class="form-control editing">
+    </div>
+</div>

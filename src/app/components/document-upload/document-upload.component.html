@@ -1,1 +1,10 @@
-<p>document-upload works!</p>
+<div class="document-upload">
+    <h4 *ngIf="isEditing || (documents.length > 0)">Documents</h4>
+    <input *ngIf="isEditing" type="file" (change)="onFileSelected($event)">
+
+    <div *ngIf="!isEditing" class="documents-section">
+        <div *ngFor="let document of documents" class="document-item">
+            <i [ngClass]="getIcon(document.type)"></i> {{ document.name}}
+        </div>
+    </div>
+</div>
