@@ -18,7 +18,7 @@ The parent compone that houses the ID card interface and handles the editing log
 - **Inputs**:
     -`user`: The user object containing all user information.
 - **Outputs**:
-    - `onUserChange: Emits updated user information when changes are made. 
+    - `onUserChange`: Emits updated user information when changes are made. 
 
 ### AccountInfoComponent, AddressInfoComponent, PersonalInfoComponent
 
