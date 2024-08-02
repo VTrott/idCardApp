@@ -28,5 +28,10 @@
 
     .address-info-item label {
         margin-bottom: 4px;
+        text-align: left;
+        width: 100%;
+    }
+    .mailing-address,.home-address {
+        width:100%
     }
 }
