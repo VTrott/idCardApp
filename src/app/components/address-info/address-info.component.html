@@ -2,8 +2,8 @@
     <h4>Address Information</h4>
     <div class="address-info-item">
         <label>Home Address:</label>
-        <span *ngIf="!isEditing">{{ user.homeAddress}}</span>
-        <input *ngIf="isEditing" [value]="user.homeAddress" (input)="updateUser('homeAddress', $event)" type="text" class="form-control editing">
+        <span *ngIf="!isEditing" class="home-address">{{ user.homeAddress}}</span>
+        <input *ngIf="isEditing" [value]="user.homeAddress" (input)="updateUser('homeAddress', $event)" type="text" class="form-control editing" id="home-address-form">
     </div>
     <div class="address-info-item">
         <label>Mailing Address:</label>

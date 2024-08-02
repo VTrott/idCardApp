@@ -10,13 +10,31 @@
 }
 
 .personal-info-item {
-    display:flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
+    align-items: center;
+    display:grid;
+    gap:20px;
+    grid-template-columns: 300px 1fr;
+    margin-bottom: 15px;
 }
 
 .personal-info-item label {
     font-weight: bold;
+    margin-right: 10px;
+    width:auto;
+    white-space: nowrap;
+}
+
+.personal-info-item input.editing {
+    flex-grow: 1;
+    padding: 8px; 
+}
+
+.birthday-editing-label {
+    padding-right: 120px;
+}
+
+.personal-info-item span {
+    flex-grow: 1;
 }
 
 @media (max-width: 768px) {

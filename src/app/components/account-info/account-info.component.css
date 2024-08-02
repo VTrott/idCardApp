@@ -5,6 +5,8 @@
 
 .account-info h4 {
     color: #B95319;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .info-container {
@@ -20,7 +22,7 @@
 }
 
 .info-item {
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     color:black;
 }
 

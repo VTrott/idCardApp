@@ -5,24 +5,24 @@
             <div class="info-item">
                 <label>First Name:</label>
                 <span *ngIf="!isEditing">{{ user.firstName}}</span>
-                <input *ngIf="isEditing" [value]="user.firstName" (input)="updateUser('firstName',$event)" type="text" class="form-control editing">
+                <input *ngIf="isEditing" [value]="user.firstName" (input)="updateUser('firstName',$event)" type="text" class="form-control editing" id="firstName">
             </div>
             <div class="info-item">
                 <label>Last Name:</label>
                 <span *ngIf="!isEditing">{{ user.lastName }}</span>
-                <input *ngIf="isEditing" [value]="user.lastName" (input)="updateUser('lastName', $event)" type="text" class="form-control editing">
+                <input *ngIf="isEditing" [value]="user.lastName" (input)="updateUser('lastName', $event)" type="text" class="form-control editing" id="lastName">
             </div>
         </div>
         <div class="right-section">
             <div class="info-item">
                 <label>Registered Email:</label>
                 <span *ngIf="!isEditing">{{ user.email}}</span>
-                <input *ngIf="isEditing" [value]="user.email" (input)="updateUser('email', $event)" type="email" class="form-control editing">
+                <input *ngIf="isEditing" [value]="user.email" (input)="updateUser('email', $event)" type="email" class="form-control editing" id="email">
             </div>
             <div class="info-item">
                 <label>Cellphone Number:</label>
                 <span *ngIf="!isEditing">{{ user.phoneNumber}}</span>
-                <input *ngIf="isEditing" [value]="user.phoneNumber" (input)="updateUser('phoneNumber', $event)" type="phoneNumber" class="form-control editing">
+                <input *ngIf="isEditing" [value]="user.phoneNumber" (input)="updateUser('phoneNumber', $event)" type="phoneNumber" class="form-control editing" id="phoneNumber">
             </div>
         </div>
     </div>

@@ -5,6 +5,8 @@
 
 .document-upload h4 {
     color: #B95319;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 @media (max-width:768px) {

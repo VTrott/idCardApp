@@ -5,16 +5,19 @@
 
 .address-info h4{
     color: #B95319;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .address-info-item {
     display:flex;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .address-info-item label {
     font-weight: bold;
     padding-right: 10px;
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
